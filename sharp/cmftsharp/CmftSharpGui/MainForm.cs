@@ -52,7 +52,12 @@ namespace CmftSharpGui
                 if (!image.IsCubemap())
                 {
                     // conversion failed
+                    
                 }
+
+                int size = image.Width();
+                image.DoIrradianceFilterSh(size);
+                image.Save(@"test.hdr", ImageFileType.HDR, OutputType.HCross, TextureFormat.RGBE);
             }
         }
     }

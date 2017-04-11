@@ -100,7 +100,7 @@ namespace cmftclr
 		}
 
 		const char* fileName = (const char*)(void*)Marshal::StringToHGlobalAnsi(filePath);
-		return imageSave(*image, fileName, ft, ot, tf, false);
+		return imageSave(*image, fileName, ft, ot, tf, true);
 	}
 
 	void CmftImage::DoRadianceFilter(Int32 faceSize, LightingModel lightModel, bool excludeBase, Byte mipCount, Byte glossScale, Byte glossBias, EdgeFixup edgeFixup, Byte numCPUThreads)
